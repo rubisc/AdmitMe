@@ -3,4 +3,4 @@
 ### Intro
 
 ### ERD
-<img src="./readmeImages/project4erd.png">
+![ERD](./readmeImages/project4erd.png)
