@@ -11,22 +11,22 @@ College Tracker is an app designed for international high school students that a
 #### Some additional information...
 The purpose of this app is for students to stay informed and organized by having access to a colleges' application requirements and deadlines. Applying to college can be a stressful time because there are many things to juggle at once, and it can become tricky keeping track of it all--College Tracker allows students to have a space to store all of this information and easily access it on the go.
 
-####Wireframes
+#### Wireframes
 
-####Check out the user stories for this project on my [Trello](https://trello.com/b/KNpmyhhc/wdi-sm-project-4)
+#### Check out the user stories for this project on my [Trello](https://trello.com/b/KNpmyhhc/wdi-sm-project-4)
 
-####Technologies used:
+#### Technologies used:
 + Mongo DB
 + Express
 + Angular
 + Node.js
 + Authentication of some sort TBD
 
-####Approach
+#### Approach
 As the ERD demonstrates, this app requires two models: student and college. Students will be able to log onto their account, browse colleges, filter by certain information, and add colleges to their personal college list.
 
 
-####Stretch Goals
+#### Stretch Goals
 The following are features I would like to add to this app:
 
 + Expand the college model to include more application requirement information  
@@ -37,12 +37,10 @@ The following are features I would like to add to this app:
 + Include information for early action and early decision
 
 
-####Installation Instructions
+#### Installation Instructions
 1. `$ git clone git@github.com:rubisc/College_Tracker.git`
-<br>
 2. `$ npm install`
-<br>
 3. `$ node server`
 
-####Link to App on Heroku
+#### Link to App on Heroku
 Stay tuned!
