@@ -5,13 +5,17 @@ College Tracker is an app designed for international high school students that a
 
 
 #### ERD
-*Nota bene: this should be a one to many relationship
+*One to many relationship from students to colleges
 ![ERD](./readmeImages/project4erd.png)
 
 #### Some additional information...
-The purpose of this app is for students to stay informed and organized by having access to a colleges' application requirements and deadlines. Applying to college can be a stressful time because there are many things to juggle at once, and it can become tricky keeping track of it all--College Tracker allows students to have a space to store all of this information and easily access it on the go.
+The purpose of this app is for students to stay informed and organized by having access to colleges' application requirements and deadlines. Applying to college can be a stressful time because there are many things to juggle at once, and it can become tricky keeping track of it all--College Tracker allows students to have a space to store all of this information and easily access it on the go. Additionally, students will have link to a blog with common FAQs so that they may have something to reference when they feel stuck at some point of the college application process.
 
 #### Wireframes
+![Wireframe1](./readmeImages/1_wireframe_my_colleges.jpg)
+![Wireframe2](./readmeImages/2_wireframe_college_showpage.jpg)
+![Wireframe3](./readmeImages/3_wireframe_browse_colleges.jpg)
+![Wireframe4](./readmeImages/4_wireframe_my_notes.jpg)
 
 #### Check out the user stories for this project on my [Trello](https://trello.com/b/KNpmyhhc/wdi-sm-project-4)
 
@@ -23,7 +27,7 @@ The purpose of this app is for students to stay informed and organized by having
 + Authentication of some sort TBD
 
 #### Approach
-As the ERD demonstrates, this app requires two models: student and college. Students will be able to log onto their account, browse colleges, filter by certain information, and add colleges to their personal college list.
+As the ERD demonstrates, this app requires two models: student and college. Students will be able to log onto their account, browse colleges, filter by certain information, and add colleges to their personal college list. Users will have full CRUD, while colleges will display an index, a show, and a destroy (to remove college from My Colleges).
 
 
 #### Stretch Goals
