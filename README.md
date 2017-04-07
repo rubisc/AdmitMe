@@ -1,3 +1,6 @@
-# AdmitMe
+# College Tracker
 
-AdmitME
+### Intro
+
+### ERD
+<img src="./readmeImages/project4erd.png">
