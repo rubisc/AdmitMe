@@ -1,0 +1,30 @@
+var express   = require('express'),
+	app         = express(),
+	logger      = require('morgan'),
+	bodyParser	= require('body-parser'),
+	mongoose    = require('mongoose'),
+	port        = process.env.PORT || 3000,
+	studentRoutes  = require('./backend/config/student_routes.js'),
+	collegeRoutes  = require('./backend/config/college_routes.js')
+
+// connect database
+var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/collegetracker'
+mongoose.connect(dbUri)
+
+//log requests made to the app
+app.use(logger('dev'))
+
+//make json objects available in requests
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+
+//mount studentRoutes at /api/students
+app.use('/api/students', studentRoutes)
+//mount collegeRoutes at /api/colleges_controller
+app.use('/api/colleges', collegeRoutes)
+
+
+//run the web server
+app.listen(port, function(){
+	console.log('Server started on', port)
+})
