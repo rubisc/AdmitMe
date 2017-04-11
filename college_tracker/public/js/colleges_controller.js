@@ -5,10 +5,8 @@ CollegesController.$inject = ['$http']
 function CollegesController($http){
   var vm = this
   vm.all = []
-  vm.newCollege = {}
   vm.selectedCollege = {}
   vm.getColleges = getColleges
-  vm.addCollege = addCollege
   vm.getOneCollege = getOneCollege
 
   // Prepopulate vm.all with colleges from API
@@ -23,20 +21,12 @@ function CollegesController($http){
     })
   }
 
-  function addCollege(){
-    $http
-      .post('/api/colleges', vm.newCollege)
-      .then(function(response){
-        getColleges()
-    })
-    vm.newCollege = {}
-  }
-
   // show
   function getOneCollege(college) {
     $http
-      .get('/api/colleges/' + college._id)
+      .get('http://localhost:3000/api/colleges/' + college._id)
       .then(function(response) {
+        console.log(response.data)
         vm.selectedCollege = response.data
       })
   }

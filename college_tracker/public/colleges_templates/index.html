@@ -1,6 +1,7 @@
 <h1>Browse all Colleges</h1>
 <ul id="colleges">
   <li ng-repeat="college in CollegesCtrl.all" data-id="{{college._id}}">
-    <strong>{{college.name}}</strong> | {{college.city}} | {{college.admissionRate}}
+    <strong>{{college.name}}</strong>, <em>located in {{college.city}} </em>
+    <button ui-sref="show" ng-click="CollegesCtrl.getOneCollege(college)">More Info</button>
   </li>
 </ul>
