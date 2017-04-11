@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="college_tracker">
+  <head>
+    <meta charset="utf-8">
+    <title>College Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- load angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- load ui-router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/students_controller.js"></script>
+    <script src="/js/colleges_controller.js"></script>
+
+  </head>
+
+  	<body ng-controller="CollegesController as CollegesCtrl">
+  		<nav>
+        My College List
+  			| <a ui-sref-active="active" ui-sref="index">Browse Colleges</a> |
+  			<a ui-sref-active="active" ui-sref="index">My Profile</a> |
+  		</nav>
+
+      <hr>
+
+  		<main ui-view>
+  			<!-- angular ui.router will insert page template here: -->
+  		</main>
+
+  	</body>
+  </html>

@@ -1,11 +1,14 @@
 var express   = require('express'),
 	app         = express(),
 	logger      = require('morgan'),
+	cookieParser   = require('cookie-parser'),
 	bodyParser	= require('body-parser'),
 	mongoose    = require('mongoose'),
+	passport    = require('passport'),
 	port        = process.env.PORT || 3000,
 	studentRoutes  = require('./backend/config/student_routes.js'),
 	collegeRoutes  = require('./backend/config/college_routes.js')
+	// session     = require('express-session')
 
 // connect database
 var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/collegetracker'
@@ -23,8 +26,10 @@ app.use('/api/students', studentRoutes)
 //mount collegeRoutes at /api/colleges_controller
 app.use('/api/colleges', collegeRoutes)
 
+//mount 'public' folder as '/'
+app.use(express.static('public'))
 
 //run the web server
 app.listen(port, function(){
-	console.log('Server started on', port)
+	console.log('Server running on', port)
 })

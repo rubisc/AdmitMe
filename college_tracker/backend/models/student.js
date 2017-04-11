@@ -15,6 +15,15 @@ var studentSchema = new mongoose.Schema({
   collegeList: [{type: mongoose.Schema.ObjectId, ref: 'College'}]
 })
 
+// PASSPORT AUTHENTICATION
+// Student.methods.encrypt = function(password) {
+//   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+// };
+//
+// Student.methods.validPassword = function(password) {
+//   return bcrypt.compareSync(password, this.local.password);
+// }
+
 var Student = mongoose.model('Student', studentSchema)
 
 module.exports = Student

@@ -18,6 +18,16 @@ function createStudent(req, res, next) {
     res.send(student)
   })
 }
+// SHOW
+function showStudent(req, res) {
+  var id = req.params.id
+
+  Student.find({_id: id}, function(err, student) {
+    if (err) throw err
+
+    res.send(student)
+  })
+}
 // UPDATE
 function updateStudent(req, res) {
   Student.findById({_id: req.params.id}, function(err, student) {
@@ -52,6 +62,7 @@ function destroyStudent(req, res) {
 module.exports = {
   indexStudent: indexStudent,
   createStudent: createStudent,
+  showStudent: showStudent,
   updateStudent: updateStudent,
   destroyStudent: destroyStudent
 }
