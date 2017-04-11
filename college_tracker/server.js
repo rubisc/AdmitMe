@@ -1,5 +1,5 @@
 var express   = require('express'),
-	// cors        = require('cors'),
+	cors        = require('cors'),
 	app         = express(),
 	logger      = require('morgan'),
 	cookieParser   = require('cookie-parser'),
@@ -12,7 +12,7 @@ var express   = require('express'),
 	// session     = require('express-session')
 
 // // mount cors as middleware like this:
-// app.use(cors())
+app.use(cors())
 
 // connect database
 var dbUri = process.env.MONGODB_URI || 'mongodb://localhost/collegetracker'
