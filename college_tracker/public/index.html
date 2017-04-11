@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="college_tracker">
   <head>
     <meta charset="utf-8">
     <title>College Tracker</title>
@@ -14,11 +14,12 @@
 
   </head>
 
-  	<body ng-app="college_tracker" ng-controller="CollegesController as CollegesCtrl">
+  	<body ng-controller="CollegesController as CollegesCtrl">
   		<nav>
-        Browse Colleges | 
+        <a ui-sref-active="active" ui-sref="index">Browse College List</a> |
   			<a ui-sref-active="active" ui-sref="#">My College List</a> |
   			<a ui-sref-active="active" ui-sref="#">My Profile</a> |
+  			<a ui-sref-active="active" ui-sref="#">About</a> |
   		</nav>
 
       <hr>

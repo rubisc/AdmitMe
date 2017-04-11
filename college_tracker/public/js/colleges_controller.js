@@ -23,12 +23,13 @@ function CollegesController($http){
 
   // show
   function getOneCollege(college) {
-    $http
-      .get('http://localhost:3000/api/colleges/' + college._id)
-      .then(function(response) {
-        console.log(response.data)
-        vm.selectedCollege = response.data
-      })
+    // $http
+    //   .get('http://localhost:3000/api/colleges/' + college._id)
+    //   .then(function(response) {
+        console.log(college)
+        vm.selectedCollege = college
+        console.log(vm.selectedCollege.name)
+      // })
   }
 
 // I don't actually want students to add or delete colleges; only to their favorites aka My College List. Therefore these actions will go in the students_controller as an update

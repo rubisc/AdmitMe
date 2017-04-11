@@ -1,18 +1,37 @@
-<h1>{{college.name}}</h1>
+<h1>{{CollegesCtrl.selectedCollege.name}}</h1>
 <!-- city -->
 <div>
-  <strong>City: </strong>{{college.city}}
+  <strong>City: </strong>{{CollegesCtrl.selectedCollege.city}}
 </div>
 <!-- admission rate -->
 <div>
-  <strong>Admission Rate: </strong>{{college.admissionRate}}%
+  <strong>Admission Rate: </strong>{{CollegesCtrl.selectedCollege.admissionRate}}%
+</div>
+<!-- common app or uc app? write code to determine whether it is one or the other-->
+<div>
+  <strong>Accepts Common App: </strong>{{CollegesCtrl.selectedCollege.commonApp}}
 </div>
 <!-- cost of tuition -->
-
+<div>
+  <strong>Cost of Tuition: </strong>{{CollegesCtrl.selectedCollege.costOfTuition | currency:"USD$":0}}
+</div>
 <!-- regular app due date -->
+<div>
+  <strong>Regular International Application Deadline: </strong>{{CollegesCtrl.selectedCollege.regularAppDue | date:'MMM-dd'}}
+</div>
 <!-- toefl scores due date -->
+<div>
+  <strong>TOEFL Scores Due by (for Regular App): </strong>{{CollegesCtrl.selectedCollege.toeflScoresDue | date:'MMM-dd'}}
+</div>
 <!-- letter of recs required -->
+<div>
+  <strong>Number of Teacher Recommendations Needed: </strong>{{CollegesCtrl.selectedCollege.letterOfRecsRequired}}
+</div>
 <!-- average gpa admitted -->
+<div>
+  <strong>Average GPA of Accepted Students: </strong>{{CollegesCtrl.selectedCollege.averageGpaAdmitted}}
+</div>
 <!-- international app fee -->
-<!-- uc app -->
-<!-- common app -->
+<div>
+  <strong>International App Fee: </strong>{{CollegesCtrl.selectedCollege.internationalAppFee | currency}}
+</div>

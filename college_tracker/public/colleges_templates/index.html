@@ -1,7 +1,19 @@
 <h1>Browse all Colleges</h1>
 <ul id="colleges">
   <li ng-repeat="college in CollegesCtrl.all" data-id="{{college._id}}">
-    <strong>{{college.name}}</strong>, <em>located in {{college.city}} </em>
-    <button ui-sref="show" ng-click="CollegesCtrl.getOneCollege(college)">More Info</button>
+
+      <strong>{{college.name}}</strong>
+      {{college.city}} | 
+      {{college.admissionRate}} | 
+      {{college.commonApp}} |
+      {{college.ucApp}} |
+      {{college.costOfTuition | currency:"USD$":0}} |
+      {{college.regularAppDue | date:'MMM-dd'}} |
+      {{college.toeflScoresDue | date:'MMM-dd'}} |
+      {{college.letterOfRecsRequired}} |
+      {{college.averageGpaAdmitted}} |
+      {{college.internationalAppFee | currency}} |
+
+    <button ui-sref="show" ng-click="CollegesCtrl.getOneCollege(college)">View</button>
   </li>
 </ul>
