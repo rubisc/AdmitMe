@@ -10,27 +10,18 @@ function CollegesController($http){
   vm.getColleges = getColleges
   vm.addCollege = addCollege
   vm.getOneCollege = getOneCollege
-  vm.deleteCollege = deleteCollege
 
   // Prepopulate vm.all with colleges from API
   getColleges()
 
   function getColleges(){
     $http
-      .get('/api/colleges')
+      // will need to change this to heroku when deploying
+      .get('http://localhost:3000/api/colleges')
       .then(function(response) {
         vm.all = response.data
     })
   }
-
-// show
-function getOneCollege(college) {
-  $http
-    .get('/api/colleges/' + college._id)
-    .then(function(response) {
-      vm.selectedCollege = response.data
-    })
-}
 
   function addCollege(){
     $http
@@ -41,12 +32,23 @@ function getOneCollege(college) {
     vm.newCollege = {}
   }
 
-  function deleteCollege(college){
+  // show
+  function getOneCollege(college) {
     $http
-      .delete('/api/colleges/' + college._id)
-      .then(function(response){
-		 getColleges()
+      .get('/api/colleges/' + college._id)
+      .then(function(response) {
+        vm.selectedCollege = response.data
       })
   }
+
+// I don't actually want students to add or delete colleges; only to their favorites aka My College List. Therefore these actions will go in the students_controller as an update
+// // delete
+//   function deleteCollege(college){
+//     $http
+//       .delete('/api/colleges/' + college._id)
+//       .then(function(response){
+// 		 getColleges()
+//       })
+//   }
 
 }

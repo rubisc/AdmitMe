@@ -9,16 +9,16 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
   $stateProvider
   .state('index', {
     url: '/',
-    templateUrl: '../colleges_templates/index.html'
-  })
-  .state('new', {
-    url: '/new',
-    templateUrl: '../colleges_templates/new.html'
+    templateUrl: 'colleges_templates/index.html',
+    controller: 'CollegesController',
+    controllerAs: 'CollegesCtrl'
   })
   .state('show', {
     url: '/colleges/:id',
-    templateUrl: '../colleges_templates/show.html'
-  });
+    templateUrl: 'colleges_templates/show.html',
+    controller: 'CollegesController',
+    controllerAs: 'CollegesCtrl'
+  })
 
   // Default (fallback) route:
   $urlRouterProvider.otherwise('/')

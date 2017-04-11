@@ -2,6 +2,5 @@
 <ul id="colleges">
   <li ng-repeat="college in CollegesCtrl.all" data-id="{{college._id}}">
     <strong>{{college.name}}</strong> | {{college.city}} | {{college.admissionRate}}
-    <button ng-click="CollegesCtrl.deleteCollege(college)">X</button>
   </li>
 </ul>
