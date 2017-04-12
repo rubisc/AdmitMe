@@ -1,4 +1,4 @@
-var {indexCollege, createCollege, showCollege, destroyCollege} = require('../controllers/colleges_controller.js'),
+var {indexCollege, createCollege, collegeList, showCollege, destroyCollege} = require('../controllers/colleges_controller.js'),
 express = require('express'),
  router = express.Router()
 
@@ -11,5 +11,7 @@ router.route('/')
 router.route('/:id')
   .get(showCollege)
   .delete(destroyCollege)
+  .post(collegeList)
+
 
   module.exports = router

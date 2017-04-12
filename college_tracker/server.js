@@ -9,7 +9,8 @@ var express   = require('express'),
 	port        = process.env.PORT || 3000,
 	studentRoutes  = require('./backend/config/student_routes.js'),
 	collegeRoutes  = require('./backend/config/college_routes.js')
-	// session     = require('express-session')
+	// session     = require('express-session'),
+	bcrypt 			= require('bcrypt-nodejs')
 
 // // mount cors as middleware like this:
 app.use(cors())

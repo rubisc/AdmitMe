@@ -18,7 +18,11 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     templateUrl: 'colleges_templates/show.html'
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
-  });
+  })
+  .state('myCollegeList', {
+    url: '/students/favorites',
+    templateUrl: 'students_templates/favs.html'
+  })
 
   // Default (fallback) route:
   $urlRouterProvider.otherwise('/')

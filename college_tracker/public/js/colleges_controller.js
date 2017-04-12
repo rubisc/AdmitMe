@@ -21,6 +21,8 @@ function CollegesController($http){
         vm.all = response.data
     })
   }
+//
+  
 
   // show
   function getOneCollege(college) {
