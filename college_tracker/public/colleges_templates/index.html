@@ -1,24 +1,24 @@
 <h1>Browse all Colleges</h1>
 <label>Search</label>
-<input type="search" class="form-control" ng-model="collegeVm.search" placeholder="search...">
+<input type="search" class="form-control" ng-model="CollegesCtrl.search" placeholder="search...">
 <table class="colleges">
   <thead>
     <tr>
-      <th ng-click="vm.sortBy = 'name'; collegeVm.reverse = !collegeVm.reverse">Name</th>
-      <th ng-click="vm.sortBy = 'city'; collegeVm.reverse = !collegeVm.reverse">City</th>
-      <th ng-click="vm.sortBy = 'admissionRate'; collegeVm.reverse = !collegeVm.reverse">Admission Rate</th>
-      <th ng-click="vm.sortBy = 'commonApp'; collegeVm.reverse = !collegeVm.reverse">Common App</th>
-      <th ng-click="vm.sortBy = 'ucApp'; collegeVm.reverse = !collegeVm.reverse">UC App</th>
-      <th ng-click="vm.sortBy = 'costOfTuition'; collegeVm.reverse = !collegeVm.reverse">Cost of Tuition</th>
-      <th ng-click="vm.sortBy = 'regularAppDue'; collegeVm.reverse = !collegeVm.reverse">App Deadline (Regular International)</th>
-      <th ng-click="vm.sortBy = 'toeflScoresDue'; collegeVm.reverse = !collegeVm.reverse">TOEFL Scores Due (Regular)</th>
-      <th ng-click="vm.sortBy = 'letterOfRecsRequired'; collegeVm.reverse = !collegeVm.reverse">Letter of Recs Required</th>
-      <th ng-click="vm.sortBy = 'averageGpaAdmitted'; collegeVm.reverse = !collegeVm.reverse">Average GPA Admitted</th>
-      <th ng-click="vm.sortBy = 'internationalAppFee'; collegeVm.reverse = !collegeVm.reverse">International App Fee</th>
+      <th ng-click="CollegesCtrl.sortBy = 'name'; CollegesCtrl.descending = !CollegesCtrl.descending">Name</th>
+      <th ng-click="CollegesCtrl.sortBy = 'city'; CollegesCtrl.descending = !CollegesCtrl.descending">City</th>
+      <th ng-click="CollegesCtrl.sortBy = 'admissionRate'; CollegesCtrl.descending = !CollegesCtrl.descending">Admission Rate</th>
+      <th ng-click="CollegesCtrl.sortBy = 'commonApp'; CollegesCtrl.descending = !CollegesCtrl.descending">Common App</th>
+      <th ng-click="CollegesCtrl.sortBy = 'ucApp'; CollegesCtrl.descending = !CollegesCtrl.descending">UC App</th>
+      <th ng-click="CollegesCtrl.sortBy = 'costOfTuition'; CollegesCtrl.descending = !CollegesCtrl.descending">Cost of Tuition</th>
+      <th ng-click="CollegesCtrl.sortBy = 'regularAppDue'; CollegesCtrl.descending = !CollegesCtrl.descending">App Deadline (Regular International)</th>
+      <th ng-click="CollegesCtrl.sortBy = 'toeflScoresDue'; CollegesCtrl.descending = !CollegesCtrl.descending">TOEFL Scores Due (Regular)</th>
+      <th ng-click="CollegesCtrl.sortBy = 'letterOfRecsRequired'; CollegesCtrl.descending = !CollegesCtrl.descending">Letter of Recs Required</th>
+      <th ng-click="CollegesCtrl.sortBy = 'averageGpaAdmitted'; CollegesCtrl.descending = !CollegesCtrl.descending">Average GPA Admitted</th>
+      <th ng-click="CollegesCtrl.sortBy = 'internationalAppFee'; CollegesCtrl.descending = !CollegesCtrl.descending">International App Fee</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="college in CollegesCtrl.all | filter: collegeVm.search | orderBy:collegeVm.sortBy:collegeVm.reverse">
+    <tr ng-repeat="college in CollegesCtrl.all | filter: CollegesCtrl.search | orderBy: CollegesCtrl.sortBy : CollegesCtrl.descending">
       <td><button ui-sref="show" ng-click="CollegesCtrl.getOneCollege(college)">{{college.name}}</button></td>
       <td>{{college.city}}</td>
       <td>{{college.admissionRate}}%</td>

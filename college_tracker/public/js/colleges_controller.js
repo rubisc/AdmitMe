@@ -4,6 +4,7 @@ angular.module('college_tracker')
 CollegesController.$inject = ['$http']
 function CollegesController($http){
   var vm = this
+  vm.sortBy = 'name'
   vm.all = []
   vm.selectedCollege = {}
   vm.getColleges = getColleges

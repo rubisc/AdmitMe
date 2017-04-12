@@ -4,13 +4,17 @@
 // StudentsController.$inject = [$http]
 // function StudentsController($http) {
 //   var vm = this
-//   vm.all = []
-//   vm.newStudent = {}
 //   vm.selectedStudent = {}
-//   vm.addStudent = addStudent
+//   // just for student's own profile
 //   vm.getOneStudent = getOneStudent
+//   vm.updateStudent = updateStudent
 //   vm.deleteStudent = deleteStudent
 //
-// // how many of these do I actually need for the frontend?
+//   function getOneStudent(student) {
+//     .get('http://localhost:3000/api/students' + student._id)
+//     .then(function(response) {
+//       vm.selectedStudent = student
+//     })
+//   }
 //
 // }
