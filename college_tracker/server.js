@@ -5,12 +5,9 @@ var express   = require('express'),
 	cookieParser   = require('cookie-parser'),
 	bodyParser	= require('body-parser'),
 	mongoose    = require('mongoose'),
-	// passport    = require('passport'),
 	port        = process.env.PORT || 3000,
 	studentRoutes  = require('./backend/config/student_routes.js'),
 	collegeRoutes  = require('./backend/config/college_routes.js')
-	// session     = require('express-session'),
-	// bcrypt 			= require('bcrypt-nodejs')
 
 // // mount cors as middleware like this:
 app.use(cors())

@@ -1,6 +1,5 @@
 var mongoose = require('mongoose'),
      College = require('./college.js')
-    //  bcrypt = require('bcrypt-nodejs')
 
 var studentSchema = new mongoose.Schema({
   firstName: {type: String, required: true},
@@ -16,14 +15,6 @@ var studentSchema = new mongoose.Schema({
   collegeList: [{type: mongoose.Schema.Types.ObjectId, ref: 'College'}]
 })
 
-// // PASSPORT AUTHENTICATION
-// Student.methods.encrypt = function(password) {
-//   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-// };
-//
-// Student.methods.validPassword = function(password) {
-//   return bcrypt.compareSync(password, this.local.password);
-// }
 
 var Student = mongoose.model('Student', studentSchema)
 
