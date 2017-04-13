@@ -28,6 +28,8 @@ function showCollege(req, res) {
     res.send(college)
   })
 }
+
+// for favorites aka my collegList functionality
 function collegeList(req, res) {
 User.findById(req.student.id, function(err, student) {
   if (err) res.status(404).send(err)

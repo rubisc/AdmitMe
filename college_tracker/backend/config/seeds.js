@@ -3,7 +3,6 @@ var mongoose = require('./database'),
 
 var colleges = [
   {
-    "_id": "58ec0c02aa63db97c8fad824",
     "name": "University of Chicago",
     "city": "Chicago",
     "admissionRate": 7.9,
@@ -17,7 +16,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ec3bba25a80aba3aa4669c",
     "name": "Princeton University",
     "city": "New Jersey",
     "admissionRate": 7.8,
@@ -31,7 +29,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ec3c6725a80aba3aa4669d",
     "name": "Harvard University",
     "city": "Princeton",
     "admissionRate": 5.9,
@@ -45,7 +42,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ec3cda25a80aba3aa4669e",
     "name": "Boston College",
     "city": "Chestnut Hill",
     "admissionRate": 28.8,
@@ -59,7 +55,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ed9eed0890f957599918aa",
     "name": "Yale University",
     "city": "New Haven",
     "admissionRate": 6.8,
@@ -73,7 +68,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ed9f470890f957599918ab",
     "name": "Columbia University",
     "city": "New York",
     "admissionRate": 7.4,
@@ -87,7 +81,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58ed9f990890f957599918ac",
     "name": "Stanford University",
     "city": "Stanford",
     "admissionRate": 6.6,
@@ -101,7 +94,6 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "_id": "58eda02e0890f957599918ae",
     "name": "Massachusetts Institution of Technology ",
     "city": "Cambridge",
     "admissionRate": 8.9,
@@ -113,6 +105,45 @@ var colleges = [
     "internationalAppFee": 75,
     "ucApp": "false",
     "commonApp": "false"
+  },
+  {
+    "name": "Duke University ",
+    "city": "Durham",
+    "admissionRate": 17.0,
+    "costOfTuition": 58626,
+    "regularAppDue": "2018-01-02T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-02T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.8,
+    "internationalAppFee": 85,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "University of Pennsylvania ",
+    "city": "Philadelphia",
+    "admissionRate": 12.6,
+    "costOfTuition": 58812,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.9,
+    "internationalAppFee": 75,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "California Institute of Technology ",
+    "city": "Pasadena",
+    "admissionRate": 11.8,
+    "costOfTuition": 54045,
+    "regularAppDue": "2018-01-03T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-03T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.87,
+    "internationalAppFee": 75,
+    "ucApp": "false",
+    "commonApp": "true"
   }
 ]
 
