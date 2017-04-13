@@ -11,7 +11,7 @@
 <div>
   <strong>Accepts Common App: </strong>{{CollegesCtrl.selectedCollege.commonApp}}
 </div>
-<!-- cost of tuition --> 
+<!-- cost of tuition -->
 <div>
   <strong>Cost of Tuition: </strong>{{CollegesCtrl.selectedCollege.costOfTuition | currency:"USD$":0}}
 </div>
@@ -35,3 +35,4 @@
 <div>
   <strong>International App Fee: </strong>{{CollegesCtrl.selectedCollege.internationalAppFee | currency}}
 </div>
+<button ui-sref="favorites" ng-controller="StudentsController as StudentsCtrl" ng-click="StudentsCtrl.selectedStudent">+ My College List</button>

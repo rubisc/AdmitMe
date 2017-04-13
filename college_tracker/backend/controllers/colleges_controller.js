@@ -28,6 +28,51 @@ function showCollege(req, res) {
     res.send(college)
   })
 }
+function collegeList(req, res) {
+User.findById(req.student.id, function(err, student) {
+  if (err) res.status(404).send(err)
+  console.log(student.id)
+  College.findOne({_id: id}, function(err, college) {
+    console.log(college.name)
+    if(college) {
+      student.collegeList.push(college);
+      student.save(function(err, student) {
+        if (err)res.status(404).send(err)
+
+        res.json({message: "Added to college list.", success: true, student});
+      });
+
+    } else {
+
+      var collegeFields = {
+        name                  : req.body.name,
+        city                  : req.body.city,
+        commonApp             : req.body.commonApp,
+        ucApp                 : req.body.ucApp,
+        admissionRate         : req.body.admissionRate,
+        costOfTuition         : req.body.costOfTuition,
+        regularAppDue         : req.body.regularAppDue,
+        toeflScoresDue        : req.body.toeflScoresDue,
+        letterOfRecsRequired  : req.body.letterOfRecsRequired,
+        averageGpaAdmitted    : req.body.averageGpaAdmitted,
+        internationalAppFee   : req.body.internationalAppFee
+
+      }
+
+      College.create(collegeFields, function(err, college) {
+        student.collegeList.push(college);
+        student.save(function(err, student) {
+          if (err)res.status(404).send(err)
+
+          res.json({message: "College created and added to college List", success: true, student});
+        });
+      })
+
+    }
+  })
+})
+};
+
 // DESTROY
 function destroyCollege(req, res) {
   var id = req.params.id
@@ -43,5 +88,6 @@ module.exports = {
   indexCollege: indexCollege,
   createCollege: createCollege,
   showCollege: showCollege,
+  collegeList: collegeList,
   destroyCollege: destroyCollege
 }

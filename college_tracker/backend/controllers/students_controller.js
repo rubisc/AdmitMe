@@ -1,4 +1,48 @@
-var Student = require('../models/student.js')
+var Student = require('../models/student.js'),
+  passport  = require('passport'),
+  College       = require('../models/college.js')
+
+// PASSPORT AUTHENTICATION
+// function getSignup(req, res) {
+//   res.render('authentication/signup.ejs', {message: req.flash('signupMessage')})
+// }
+//
+// function postSignup(req, res) {
+//   var signupStrategy = passport.authenticate('local-signup', {
+//       successRedirect: '/',
+//       failureRedirect: '/students/signup',
+//       failureFlash: trues
+//     }
+//   )
+//   return signupStrategy(req, res);
+// }
+//
+// function getLogin(req, res) {
+//   res.render('authentication/login.ejs', {message: req.flash('loginMessage')})
+// }
+//
+// function postLogin(req, res) {
+//   var loginProperty = passport.authenticate('local-login', {
+//     successRedirect: '/',
+//     failureRedirect: '/users/login',
+//     failureFlash: true
+//   })
+//
+//   return loginProperty(req, res)
+// }
+//
+// function getLogout(req, res, next) {
+//   req.logout();
+//   // req.session.destroy(function(err) {
+//   //     if (err) {
+//   //       return next(err);
+//   //     }
+//   //     return res.send({
+//   //       authenticated: req.isAuthenticated()
+//   //     })
+//   //   })
+//     res.redirect('/students/login');
+//   }
 
 // INDEX
 function indexStudent(req, res) {

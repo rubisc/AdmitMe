@@ -10,9 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.1",
+<<<<<<< HEAD
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.3",
+=======
+>>>>>>> a6ccf09934f1f9079bdf0154be5e82dbd89f588b
     "express": "^4.15.2",
     "mongoose": "^4.9.4",
     "morgan": "^1.8.1"
