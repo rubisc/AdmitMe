@@ -94,7 +94,7 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "name": "Massachusetts Institution of Technology ",
+    "name": "Massachusetts Institution of Technology",
     "city": "Cambridge",
     "admissionRate": 8.9,
     "costOfTuition": 56242,
@@ -107,7 +107,7 @@ var colleges = [
     "commonApp": "false"
   },
   {
-    "name": "Duke University ",
+    "name": "Duke University",
     "city": "Durham",
     "admissionRate": 17.0,
     "costOfTuition": 58626,
@@ -120,7 +120,7 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "name": "University of Pennsylvania ",
+    "name": "University of Pennsylvania",
     "city": "Philadelphia",
     "admissionRate": 12.6,
     "costOfTuition": 58812,
@@ -133,7 +133,7 @@ var colleges = [
     "commonApp": "true"
   },
   {
-    "name": "California Institute of Technology ",
+    "name": "California Institute of Technology",
     "city": "Pasadena",
     "admissionRate": 11.8,
     "costOfTuition": 54045,
@@ -141,6 +141,71 @@ var colleges = [
     "toeflScoresDue": "2018-01-03T08:00:00.000Z",
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.87,
+    "internationalAppFee": 75,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "Dartmouth College",
+    "city": "Hanover",
+    "admissionRate": 9.8,
+    "costOfTuition": 60198,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.83,
+    "internationalAppFee": 80,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "Johns Hopkins University",
+    "city": "Baltimore",
+    "admissionRate": 17.7,
+    "costOfTuition": 59102,
+    "regularAppDue": "2018-01-05T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-05T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.78,
+    "internationalAppFee": 70,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "Northwestern University",
+    "city": "Evanston",
+    "admissionRate": 15.3,
+    "costOfTuition": 59383,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 1,
+    "averageGpaAdmitted": 3.79,
+    "internationalAppFee": 75,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "Washington University in St. Louis",
+    "city": "St. Louis",
+    "admissionRate": 17.9,
+    "costOfTuition": 58818,
+    "regularAppDue": "2018-01-15T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-15T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.8,
+    "internationalAppFee": 75,
+    "ucApp": "false",
+    "commonApp": "true"
+  },
+  {
+    "name": "Cornell University",
+    "city": "Ithaca",
+    "admissionRate": 16.6,
+    "costOfTuition": 59037,
+    "regularAppDue": "2018-01-02T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-02T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.78,
     "internationalAppFee": 75,
     "ucApp": "false",
     "commonApp": "true"

@@ -13,15 +13,19 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
   })
+  .state('signin', {
+    url: '/signin',
+    templateUrl: 'signin.html',
+  })
   .state('show', {
     url: '/colleges/:id',
     templateUrl: 'colleges_templates/show.html'
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
   })
-  .state('myCollegeList', {
-    url: '/students/favorites',
-    templateUrl: 'students_templates/favs.html'
+  .state('collegeList', {
+    url: '/students/:id',
+    templateUrl: 'students_templates/show.html'
   })
 
   // Default (fallback) route:
