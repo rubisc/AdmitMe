@@ -26,6 +26,9 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
+app.get('/', function(){
+	console.log('Its ok Rubi')
+})
 //mount studentRoutes at /api/students
 app.use('/api/students', studentRoutes)
 //mount collegeRoutes at /api/colleges_controller
