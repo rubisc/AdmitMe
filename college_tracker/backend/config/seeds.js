@@ -116,4 +116,14 @@ var colleges = [
   }
 ]
 
-module.exports = colleges
+College.remove({}, function(err){
+	if (err) throw err
+	console.log('Cleared colleges.')
+	College.create(colleges, function(err, colleges){
+		if (err) throw err
+		console.log(`Seeded ${colleges.length} colleges to the database.`)
+
+		mongoose.connection.close()
+        process.exit()
+	})
+})
