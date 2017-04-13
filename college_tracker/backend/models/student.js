@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
-     College = require('./college.js'),
-     bcrypt = require('bcrypt-nodejs')
+     College = require('./college.js')
+    //  bcrypt = require('bcrypt-nodejs')
 
 var studentSchema = new mongoose.Schema({
   firstName: {type: String, required: true},

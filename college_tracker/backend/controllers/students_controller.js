@@ -1,5 +1,5 @@
 var Student = require('../models/student.js'),
-  passport  = require('passport'),
+  // passport  = require('passport'),
   College       = require('../models/college.js')
 
 // PASSPORT AUTHENTICATION
