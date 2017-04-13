@@ -26,17 +26,14 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.get('/', function(req, res){
-	console.log('Its ok Rubi')
-	res.json({message: 'Connected'})
-})
+//mount 'public' folder as '/'
+app.use(express.static('public'))
+
 //mount studentRoutes at /api/students
 app.use('/api/students', studentRoutes)
 //mount collegeRoutes at /api/colleges_controller
 app.use('/api/colleges', collegeRoutes)
 
-//mount 'public' folder as '/'
-app.use(express.static('public'))
 
 //run the web server
 app.listen(port, function(){
