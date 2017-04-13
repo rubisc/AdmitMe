@@ -26,8 +26,9 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.get('/', function(){
+app.get('/', function(req, res){
 	console.log('Its ok Rubi')
+	res.json({message: 'Connected'})
 })
 //mount studentRoutes at /api/students
 app.use('/api/students', studentRoutes)
