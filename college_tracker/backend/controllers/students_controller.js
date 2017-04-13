@@ -1,81 +1,81 @@
-var Student = require('../models/student.js'),
-  College       = require('../models/college.js')
+var Student = require('../models/student.js')
+  // College       = require('../models/college.js')
 
-// PASSPORT AUTHENTICATION
-// function getSignup(req, res) {
-//   res.render('authentication/signup.ejs', {message: req.flash('signupMessage')})
-// }
-//
-// function postSignup(req, res) {
-//   var signupStrategy = passport.authenticate('local-signup', {
-//       successRedirect: '/',
-//       failureRedirect: '/students/signup',
-//       failureFlash: trues
-//     }
-//   )
-//   return signupStrategy(req, res);
-// }
-//
-// function getLogin(req, res) {
-//   res.render('authentication/login.ejs', {message: req.flash('loginMessage')})
-// }
-//
-// function postLogin(req, res) {
-//   var loginProperty = passport.authenticate('local-login', {
-//     successRedirect: '/',
-//     failureRedirect: '/users/login',
-//     failureFlash: true
-//   })
-//
-//   return loginProperty(req, res)
-// }
-//
-// function getLogout(req, res, next) {
-//   req.logout();
-//   // req.session.destroy(function(err) {
-//   //     if (err) {
-//   //       return next(err);
-//   //     }
-//   //     return res.send({
-//   //       authenticated: req.isAuthenticated()
-//   //     })
-//   //   })
-//     res.redirect('/students/login');
-//   }
-
-// INDEX
-function indexStudent(req, res) {
-  Student.find({}, function(err, students) {
-    if (err) throw err
-
-    res.send(students)
-  })
-}
-// CREATE
 function createStudent(req, res, next) {
-  var student = new Student(req.body)
+  if (!req.body.password) {
+    return res.status(422).send('Missing required fields');
+  }
+  console.log(req.body)
+  Student
+    .create(req.body)
+    .then(function(student) {
+      res.json({
+        success: true,
+        message: 'Successfully created student.',
+        data: {
+          email: student.email,
+          id:    student._id
+        }
+      });
+    }).catch(function(err) {
+      if (err.message.match(/E11000/)) {
+        err.status = 409;
+      } else {
+        err.status = 422;
+      }
+      next(err);
+    });
+};
 
-  student.save(function(err, student) {
-    if (err) throw err
+function me(req, res, next) {
+  Student
+    .findOne({email: req.decoded.email}).exec()
+    .then(function(student) {
+      res.json({
+        success: true,
+        message: 'Successfully retrieved student data.',
+        data: student
+      });
+    })
+    .catch(function(err) {
+      next(err);
+    });
+};
 
-    res.send(student)
-  })
-}
-// SHOW
-function showStudent(req, res) {
-  var id = req.params.id
-
-  Student.find({_id: id}, function(err, student) {
-    if (err) throw err
-
-    res.send(student)
-  })
-}
+// // INDEX
+// function indexStudent(req, res) {
+//   Student.find({}, function(err, students) {
+//     if (err) throw err
+//
+//     res.send(students)
+//   })
+// }
+// // CREATE
+// function createStudent(req, res, next) {
+//   var student = new Student(req.body)
+//
+//   student.save(function(err, student) {
+//     if (err) throw err
+//
+//     res.send(student)
+//   })
+// }
+// // SHOW
+// function showStudent(req, res) {
+//   var id = req.params.id
+//
+//   Student.find({_id: id}, function(err, student) {
+//     if (err) throw err
+//
+//     res.send(student)
+//   })
+// }
 // UPDATE
 function updateStudent(req, res) {
-  Student.findById({_id: req.params.id}, function(err, student) {
+  Student.findOne({_id: req.decoded._id}).exec()
+   .then(function(student, err) {
     if (err) throw err
-
+    if(req.body.email) student.email = req.body.email
     if(req.body.firstName) student.firstName = req.body.firstName
     if(req.body.lastName) student.lastName = req.body.lastName
     if(req.body.dob) student.dob = req.body.dob
@@ -93,9 +93,9 @@ function updateStudent(req, res) {
 }
 // DELETE
 function destroyStudent(req, res) {
-  var id = req.params.id
-
-  Student.remove({_id: id}, function(err) {
+  // var id = req.params.id
+  Student
+    .remove({_id: req.decoded._id}, function(err) {
     if (err) throw err
 
     res.json({message: "Student successfully deleted"})
@@ -103,9 +103,10 @@ function destroyStudent(req, res) {
 }
 
 module.exports = {
-  indexStudent: indexStudent,
+  // indexStudent: indexStudent,
   createStudent: createStudent,
-  showStudent: showStudent,
+  me: me,
+  // showStudent: showStudent,
   updateStudent: updateStudent,
   destroyStudent: destroyStudent
 }
