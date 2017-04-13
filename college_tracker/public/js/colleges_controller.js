@@ -16,8 +16,8 @@ function CollegesController($http){
   function getColleges(){
     $http
       // will need to change this to heroku when deploying
-      .get('http://localhost:3000/api/colleges')
-      // .get('https://college-tracker.herokuapp.com/api/colleges')
+      // .get('http://localhost:3000/api/colleges')
+      .get('https://college-tracker.herokuapp.com/api/colleges')
       .then(function(response) {
         vm.all = response.data
     })
