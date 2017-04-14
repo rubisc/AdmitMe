@@ -313,6 +313,45 @@ var colleges = [
     "internationalAppFee": 80,
     "ucApp": true,
     "commonApp": false
+  },
+  {
+    "name": "University of Virginia",
+    "city": "Charlottesville",
+    "admissionRate": 29.6,
+    "costOfTuition": 49561,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 1,
+    "averageGpaAdmitted": 3.73,
+    "internationalAppFee": 70,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "Carnegie Mellon University ",
+    "city": "Pittsburgh",
+    "admissionRate": 27.8,
+    "costOfTuition": 58642,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.69,
+    "internationalAppFee": 75,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "University of Southern California",
+    "city": "Los Angeles",
+    "admissionRate": 19.9,
+    "costOfTuition": 59200,
+    "regularAppDue": "2018-01-15T08:00:00.000Z",
+    "toeflScoresDue": "2018-02-15T08:00:00.000Z",
+    "letterOfRecsRequired": 1,
+    "averageGpaAdmitted": 3.7,
+    "internationalAppFee": 80,
+    "ucApp": false,
+    "commonApp": true
   }
 ]
 
