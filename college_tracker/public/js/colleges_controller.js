@@ -16,8 +16,8 @@ function CollegesController($http){
   function getColleges(){
     $http
       // will need to change this to heroku when deploying
-      .get('http://localhost:3000/api/colleges')
-      // .get('https://college-tracker.herokuapp.com/api/colleges')
+      // .get('http://localhost:3000/api/colleges')
+      .get('https://college-tracker.herokuapp.com/api/colleges')
       .then(function(response) {
         vm.all = response.data
     })
@@ -35,7 +35,7 @@ function CollegesController($http){
         console.log(vm.selectedCollege.name)
       // })
   }
-  
+
 
 // I don't actually want students to add or delete colleges; only to their favorites aka My College List. Therefore these actions will go in the students_controller as an update
 // // delete

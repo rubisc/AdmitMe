@@ -14,8 +14,16 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     // controllerAs: 'CollegesCtrl'
   })
   .state('signin', {
-    url: '/signin',
-    templateUrl: 'signin.html',
+      url: '/signin',
+      templateUrl: 'authentication_templates/signin.html',
+      controller: 'SignInController',
+      controllerAs: 'signInVm'
+  })
+  .state('signup', {
+      url: '/signup',
+      templateUrl: 'authentication_templates/signup.html',
+      controller: 'SignInController',
+      controllerAs: 'signInVm'
   })
   .state('show', {
     url: '/colleges/:id',
