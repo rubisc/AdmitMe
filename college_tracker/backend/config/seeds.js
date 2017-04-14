@@ -12,8 +12,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.76,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Princeton University",
@@ -25,8 +25,8 @@ var colleges = [
     "letterOfRecsRequired": 3,
     "averageGpaAdmitted": 3.87,
     "internationalAppFee": 65,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Harvard University",
@@ -38,8 +38,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.83,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Boston College",
@@ -51,8 +51,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.7,
     "internationalAppFee": 70,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Yale University",
@@ -64,8 +64,8 @@ var colleges = [
     "letterOfRecsRequired": 3,
     "averageGpaAdmitted": 3.85,
     "internationalAppFee": 80,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Columbia University",
@@ -77,8 +77,8 @@ var colleges = [
     "letterOfRecsRequired": 3,
     "averageGpaAdmitted": 3.81,
     "internationalAppFee": 85,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Stanford University",
@@ -90,8 +90,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.83,
     "internationalAppFee": 90,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Massachusetts Institution of Technology",
@@ -103,8 +103,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.8,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "false"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Duke University",
@@ -116,8 +116,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.8,
     "internationalAppFee": 85,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "University of Pennsylvania",
@@ -129,8 +129,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.9,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "California Institute of Technology",
@@ -142,8 +142,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.87,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Dartmouth College",
@@ -155,8 +155,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.83,
     "internationalAppFee": 80,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Johns Hopkins University",
@@ -181,8 +181,8 @@ var colleges = [
     "letterOfRecsRequired": 1,
     "averageGpaAdmitted": 3.79,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Washington University in St. Louis",
@@ -194,8 +194,8 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.8,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
   },
   {
     "name": "Cornell University",
@@ -207,8 +207,112 @@ var colleges = [
     "letterOfRecsRequired": 2,
     "averageGpaAdmitted": 3.78,
     "internationalAppFee": 75,
-    "ucApp": "false",
-    "commonApp": "true"
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "Brown University",
+    "city": "Providence",
+    "admissionRate": 9.6,
+    "costOfTuition": 57232,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.82,
+    "internationalAppFee": 75,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "University of Notre Dame",
+    "city": "Notre Dame",
+    "admissionRate": 23.3,
+    "costOfTuition": 57117,
+    "regularAppDue": "2017-12-31T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 1,
+    "averageGpaAdmitted": 3.77,
+    "internationalAppFee": 75,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "Vanderbilt University",
+    "city": "Nashville",
+    "admissionRate": 14.2,
+    "costOfTuition": 57072,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 3,
+    "averageGpaAdmitted": 3.75,
+    "internationalAppFee": 50,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "Rice University",
+    "city": "Houston",
+    "admissionRate": 16.7,
+    "costOfTuition": 51941,
+    "regularAppDue": "2018-01-01T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-01T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.78,
+    "internationalAppFee": 75,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "University of California, Berkeley",
+    "city": "Berkeley",
+    "admissionRate": 18.0,
+    "costOfTuition": 50922,
+    "regularAppDue": "2017-11-30T08:00:00.000Z",
+    "toeflScoresDue": "2018-12-31T08:00:00.000Z",
+    "letterOfRecsRequired": 0,
+    "averageGpaAdmitted": 3.84,
+    "internationalAppFee": 80,
+    "ucApp": true,
+    "commonApp": false
+  },
+  {
+    "name": "Emory University",
+    "city": "Atlanta",
+    "admissionRate": 26.3,
+    "costOfTuition": 56368,
+    "regularAppDue": "2018-01-15T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-15T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.8,
+    "internationalAppFee": 75,
+    "ucApp": false,
+    "commonApp": true
+  },
+  {
+    "name": "Georgetown University",
+    "city": "Washington",
+    "admissionRate": 17.0,
+    "costOfTuition": 58715,
+    "regularAppDue": "2018-01-10T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-10T08:00:00.000Z",
+    "letterOfRecsRequired": 2,
+    "averageGpaAdmitted": 3.75,
+    "internationalAppFee": 70,
+    "ucApp": false,
+    "commonApp": false
+  },
+  {
+    "name": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "admissionRate": 22.0,
+    "costOfTuition": 50027,
+    "regularAppDue": "2017-11-30T08:00:00.000Z",
+    "toeflScoresDue": "2018-01-15T08:00:00.000Z",
+    "letterOfRecsRequired": 0,
+    "averageGpaAdmitted": 3.68,
+    "internationalAppFee": 80,
+    "ucApp": true,
+    "commonApp": false
   }
 ]
 
