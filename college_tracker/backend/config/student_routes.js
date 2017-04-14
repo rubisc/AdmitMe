@@ -1,5 +1,6 @@
 var {createStudent, me, updateStudent, destroyStudent} = require('../controllers/students_controller.js'),
-express = require('express'),
+ {collegeList} = require('../controllers/colleges_controller.js'),
+ express = require('express'),
  router = express.Router(),
  token = require('./token_auth.js'),
  bodyParser = require('body-parser'),
@@ -11,6 +12,9 @@ router.route('/students')
 
 router.route('/token')
   .post(token.create)
+
+router.route('/students/favorites')
+  // .post(collegeList)
 
 // /api/students/:id routes:
 // router.route('/:id')

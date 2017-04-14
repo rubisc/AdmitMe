@@ -11,7 +11,7 @@ router.route('/')
 router.route('/:id')
   .get(showCollege)
   .delete(destroyCollege)
-  .post(collegeList)
+  // .post(collegeList)
 
 
   module.exports = router

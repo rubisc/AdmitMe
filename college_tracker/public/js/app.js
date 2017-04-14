@@ -27,9 +27,9 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
   })
   .state('show', {
     url: '/colleges/:id',
-    templateUrl: 'colleges_templates/show.html'
-    // controller: 'CollegesController',
-    // controllerAs: 'CollegesCtrl'
+    templateUrl: 'colleges_templates/show.html',
+    controller: 'CollegesController',
+    controllerAs: 'CollegesCtrl'
   })
   .state('collegeList', {
     url: '/students/:id',
