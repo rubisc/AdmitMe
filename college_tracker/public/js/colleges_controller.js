@@ -9,7 +9,7 @@ function CollegesController($http){
   vm.selectedCollege = {}
   vm.getColleges = getColleges
   vm.getOneCollege = getOneCollege
-  vm.addFavorite = addFavorite
+  // vm.addFavorite = addFavorite
 
 // Prepopulate vm.all with colleges from API
 getColleges()
@@ -34,16 +34,16 @@ function getOneCollege(college) {
       console.log(college)
       vm.selectedCollege = college
       console.log(vm.selectedCollege.name)
-    // })
+    }
 }
 
-function addFavorite() {
-  $http
-    .post('/students/favorites', vm.selectedCollege)
-    .then(function(response) {
-      cosole.log(response)
-    })
-}
+// function addFavorite() {
+//   $http
+//     .post('/students/favorites', vm.selectedCollege)
+//     .then(function(response) {
+//       console.log(response)
+//     })
+// }
 
 
 
@@ -59,5 +59,3 @@ function addFavorite() {
 // 		 getColleges()
 //       })
 //   }
-
-}
