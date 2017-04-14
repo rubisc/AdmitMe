@@ -18,7 +18,7 @@
     function create(data) {
       var promise = $http({
         method: 'POST',
-        url:    '/api/students',
+        url:    'https://college-tracker.herokuapp.com/api/students',
         data:   data
       });
 
