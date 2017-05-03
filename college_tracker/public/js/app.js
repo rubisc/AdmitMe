@@ -35,6 +35,15 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     url: '/students/:id',
     templateUrl: 'students_templates/show.html'
   })
+  .state('about', {
+    url: '/about',
+    templateUrl: 'about.html'
+  })
+  .state('blog', {
+        onEnter: function($window) {
+            $window.open('https://rubiscollegeappservices.wordpress.com/', '_self');
+        }
+    })
 
   // Default (fallback) route:
   $urlRouterProvider.otherwise('/')
