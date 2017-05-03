@@ -30,7 +30,7 @@ function showCollege(req, res) {
   })
 }
 
-// // for favorites aka my collegList functionality
+// for favorites aka my collegList functionality
 // function collegeList(req, res) {
 //   console.log(req.user)
 // Student.findById(req.student.id, function(err, student) {

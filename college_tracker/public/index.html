@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>College Tracker</title>
     <!-- Latest compiled and minified CSS bootstrap-->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -29,14 +30,14 @@
 
   	<body ng-controller="CollegesController as CollegesCtrl">
   		<nav>
-        <a ui-sref-active="active" ui-sref="index">Browse College List</a> |
-  			<a ui-sref-active="active" ui-sref="favorites">My College List</a> |
-  			<a ui-sref-active="active" ui-sref="#">My Profile</a> |
-  			<a ui-sref-active="active" ui-sref="about">About</a> |
-  			<a ui-sref-active="active" ui-sref="blog">Blog</a> |
+        <a ui-sref-active="active" ui-sref="index">Browse College List |</a>
+  			<a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="#">My Profile |</a>
+        <a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="favorites">My College List |</a>
+  			<a ui-sref-active="active" ui-sref="about">About | </a>
+  			<a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="blog">Blog</a>
         <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
-        <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right" ui-sref="signin">Sign out</button>
-  		</nav>
+        <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Log out</button>
+      </nav>
 
       <hr>
 

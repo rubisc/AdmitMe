@@ -47,7 +47,8 @@ angular
           function(decodedToken) {
             $log.info('Logged in!', decodedToken);
             $state.go('index');
-            console.log(vm.logIn.email)
+            console.log(vm.logIn.email);
+            return true;
           },
           // on error
           function(err) {
