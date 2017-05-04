@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/signin_controller.js"></script>
+    <script src="js/navbar_controller.js"></script>
     <script src="js/students_controller.js"></script>
     <script src="js/colleges_controller.js"></script>
     <script src="./js/config/app.debug.js"></script>
@@ -28,8 +29,7 @@
 
   </head>
 
-  	<body ng-controller="CollegesController as CollegesCtrl">
-  		<nav>
+  		<nav ng-controller="NavbarController as vm">
         <a ui-sref-active="active" ui-sref="index">Browse College List |</a>
   			<a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="#">My Profile |</a>
         <a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="favorites">My College List |</a>
@@ -38,6 +38,8 @@
         <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
         <button ng-show="vm.authService.isLoggedIn()" ng-click= "vm.authService.logOut()" type="button" class="btn btn-default navbar-btn navbar-right">Log out</button>
       </nav>
+      
+      <body ng-controller="CollegesController as CollegesCtrl">
 
       <hr>
 
