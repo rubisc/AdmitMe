@@ -31,10 +31,10 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
   })
-  .state('collegeList', {
-    url: '/students/:id',
-    templateUrl: 'students_templates/show.html'
-  })
+  // .state('collegeList', {
+  //   url: '/students/:id',
+  //   templateUrl: 'students_templates/show.html'
+  // })
   .state('about', {
     url: '/about',
     templateUrl: 'about.html'

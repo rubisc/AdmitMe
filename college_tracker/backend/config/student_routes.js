@@ -4,7 +4,8 @@ var {createStudent, me, updateStudent, destroyStudent} = require('../controllers
  router = express.Router(),
  token = require('./token_auth.js'),
  bodyParser = require('body-parser'),
- methodOverride = require('method-override')
+ methodOverride = require('method-override'),
+ Student = require('../models/student.js')
 
  // /api/students/ routes:
 router.route('/students')
@@ -14,7 +15,13 @@ router.route('/token')
   .post(token.create)
 
 router.route('/students/favorites')
-  // .post(collegeList)
+  .post(function(req,res){
+    Student.findById(req.body.id, function(err, student){
+      student.collegeList.push(req.body.college)
+      student.save()
+      res.json(student)
+    })
+  })
 
 // /api/students/:id routes:
 // router.route('/:id')

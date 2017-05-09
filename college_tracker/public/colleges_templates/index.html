@@ -20,7 +20,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="college in CollegesCtrl.all | filter: CollegesCtrl.search | orderBy: CollegesCtrl.sortBy : CollegesCtrl.descending">
-      <td><button ui-sref="show" ng-click="CollegesCtrl.getOneCollege(college)">{{college.name}}</button></td>
+      <td><button ng-click="CollegesCtrl.getOneCollege(college)">{{college.name}}</button></td>
       <td>{{college.city}}</td>
       <td>{{college.admissionRate}}%</td>
       <td>{{college.commonApp}}</td>

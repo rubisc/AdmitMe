@@ -1,5 +1,5 @@
 var Student = require('../models/student.js')
-  // College       = require('../models/college.js')
+  College       = require('../models/college.js')
 
 function createStudent(req, res, next) {
   if (!req.body.password) {
