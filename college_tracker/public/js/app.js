@@ -27,11 +27,18 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
   })
   .state('show', {
     url: '/colleges/:id',
-    templateUrl: 'colleges_templates/show.html',
+    templateUrl: 'colleges_templates/show.html'
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
   })
-  // .state('collegeList', {
+  // .state('profile', {
+  //   // WTF?!
+  //   url: '/api/me',
+  //   templateUrl: 'students_templates/show.html',
+  //   controller: 'StudentsController',
+  //   controllerAs: 'StudentsCtrl'
+  // })
+  // .state('favorites', {
   //   url: '/students/:id',
   //   templateUrl: 'students_templates/show.html'
   // })

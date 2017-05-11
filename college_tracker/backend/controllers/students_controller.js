@@ -29,7 +29,8 @@ function createStudent(req, res, next) {
 
 function me(req, res, next) {
   Student
-    .findOne({email: req.decoded.email}).exec()
+    .findOne({email: req.decoded.email}).populate('collegeList')
+    .exec()
     .then(function(student) {
       res.json({
         success: true,

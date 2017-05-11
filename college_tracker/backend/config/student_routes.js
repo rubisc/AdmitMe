@@ -14,12 +14,14 @@ router.route('/students')
 router.route('/token')
   .post(token.create)
 
-router.route('/students/favorites')
+router.route('/students/:id/favorites')
   .post(function(req,res){
-    Student.findById(req.body.id, function(err, student){
-      student.collegeList.push(req.body.college)
-      student.save()
-      res.json(student)
+    console.log(req)
+    Student.findById(req.params.id).populate('collegeList').exec(function(err, student){
+      student.collegeList.push(req.body)
+      student.save(function(err, student) {
+        res.json(student)
+      })
     })
   })
 

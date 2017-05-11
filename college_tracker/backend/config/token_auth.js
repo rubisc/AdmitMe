@@ -88,7 +88,7 @@ var Student = require('../models/student');
   */
  function authenticate(req, res, next) {
    var token = findTokenInAuthHeader(req);
-   if (!token) return next({status: 401, message: 'Authenticate with token.'});
+   if (!token) return next(JSON.stringify({status: 401, message: 'Authenticate with token.'}));
 
    verifyJwtAndHandleErrors(token, next, function(decoded) {
      req.decoded = decoded;

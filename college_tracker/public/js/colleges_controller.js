@@ -18,6 +18,7 @@ function CollegesController($http, $state, authService){
       //once call is complete get student info
         .then(function(res) {
           vm.currentStudent = res.data.data
+          console.log(vm.currentStudent)
         })
     }
 
@@ -28,8 +29,6 @@ getColleges()
 
 function getColleges(){
   $http
-    // will need to change this to heroku when deploying
-    // .get('http://localhost:3000/api/colleges')
     .get('/api/colleges')
     .then(function(response) {
       vm.all = response.data
@@ -49,15 +48,25 @@ function getOneCollege(college) {
       $state.go('show', {id: college._id})
     }
 
-function addFavorite(){
-  // grab token to get student id
-
+  function addFavorite(college) {
+    vm.currentStudent.collegeList.push(college)
+    console.log(college)
     $http
-    .post('/api/students/favorites', {college: $state.params.id, id: vm.currentStudent._id})
-    .then(function(response) {
-      console.log(response)
+    .post('/api/students/' + vm.currentStudent._id + '/favorites', college)
+    .then(function(res) {
+      getStudent()
+      console.log(vm.currentStudent)
     })
   }
+
+// function addFavorite(){
+//   // grab token to get student id
+//     $http
+//     .post('/api/students/favorites', {college: $state.params.id, id: vm.currentStudent._id})
+//     .then(function(response) {
+//       console.log(response)
+//     })
+//   }
 
 }
 
