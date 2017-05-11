@@ -33,14 +33,10 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
   })
   // .state('profile', {
   //   // WTF?!
-  //   url: '/api/me',
-  //   templateUrl: 'students_templates/show.html',
-  //   controller: 'StudentsController',
-  //   controllerAs: 'StudentsCtrl'
-  // })
-  // .state('favorites', {
-  //   url: '/students/:id',
+  //   url: '/api/students/' + vm.currentStudent._id,
   //   templateUrl: 'students_templates/show.html'
+  //   // controller: 'CollegesController',
+  //   // controllerAs: 'CollegesCtrl'
   // })
   .state('about', {
     url: '/about',

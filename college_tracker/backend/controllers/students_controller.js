@@ -43,6 +43,7 @@ function me(req, res, next) {
     });
 };
 
+// CRUD PRIOR TO ADDING JWTS
 // // INDEX
 // function indexStudent(req, res) {
 //   Student.find({}, function(err, students) {
