@@ -31,20 +31,17 @@ function CollegeRouter($stateProvider, $urlRouterProvider){
     // controller: 'CollegesController',
     // controllerAs: 'CollegesCtrl'
   })
-  // .state('profile', {
-  //   // WTF?!
-  //   url: '/api/students/' + vm.currentStudent._id,
-  //   templateUrl: 'students_templates/show.html'
-  //   // controller: 'CollegesController',
-  //   // controllerAs: 'CollegesCtrl'
-  // })
   .state('about', {
     url: '/about',
     templateUrl: 'about.html'
   })
+  .state('profile', {
+    url: '/api/me/',
+    templateUrl: 'students_templates/show.html'
+  })
   .state('blog', {
         onEnter: function($window) {
-            $window.open('https://rubiscollegeappservices.wordpress.com/', '_self');
+            $window.open('https://rubiscollegeappservices.wordpress.com/', '_blank');
         }
     })
 

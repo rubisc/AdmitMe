@@ -58,16 +58,6 @@ function getOneCollege(college) {
       console.log(vm.currentStudent)
     })
   }
-
-// function addFavorite(){
-//   // grab token to get student id
-//     $http
-//     .post('/api/students/favorites', {college: $state.params.id, id: vm.currentStudent._id})
-//     .then(function(response) {
-//       console.log(response)
-//     })
-//   }
-
 }
 
 
