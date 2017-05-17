@@ -1,4 +1,18 @@
-<h1>Student profile page</h1>
-<!-- Weird that it does not include all of the student data below -->
-<!-- {{CollegesCtrl.currentStudent}} --CANNOT get student firstName etc-->
-<h3>Welcome, {{CollegesCtrl.currentStudent.email}}!</h3>
+<div class="jumbotron">
+  <h3>Welcome, {{CollegesCtrl.currentStudent.email}}!</h3>
+  <!-- Does not include all of the student data below from my schema -->
+  <!-- {{CollegesCtrl.currentStudent}} --CANNOT get student firstName etc-->
+
+  <!-- Currently hardcoded for today's event, but need to have this loop instead -->
+  <hr>
+
+  <h4>Your college list:</h4>
+
+  <ul>
+    <li>{{CollegesCtrl.currentStudent.collegeList[0].name}}</li>
+    <li>{{CollegesCtrl.currentStudent.collegeList[1].name}}</li>
+    <li>{{CollegesCtrl.currentStudent.collegeList[2].name}}</li>
+    <li>{{CollegesCtrl.currentStudent.collegeList[3].name}}</li>
+    <li>{{CollegesCtrl.currentStudent.collegeList[4].name}}</li>
+  </ul>
+</div>

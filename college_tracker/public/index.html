@@ -32,7 +32,7 @@
   		<nav ng-controller="NavbarController as vm">
         <a ui-sref-active="active" ui-sref="index">Browse College List |</a>
   			<a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="profile">My Profile |</a>
-        <a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="#">My College List |</a>
+        <!-- <a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="#">My College List |</a> -->
   			<a ui-sref-active="active" ui-sref="about">About | </a>
   			<a ng-show="vm.authService.isLoggedIn()" ui-sref-active="active" ui-sref="blog">Blog</a>
         <button ng-hide="vm.authService.isLoggedIn()" ui-sref="signin" type="button" class="btn btn-default navbar-btn navbar-right">Sign in</button>
